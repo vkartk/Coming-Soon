@@ -112,6 +112,7 @@
             </label>
           </div>
           <div id="newsletter-input-container">
+            <input type="hidden" id="domain" name="domain" value="">
             <input type="email" name="email" placeholder="Your Email Address"  id="email" required />
             <button type="submit" id="submit">Subscribe</button>
           </div>
@@ -119,5 +120,9 @@
       </div>
       </div>
     </div>
+    <script>
+      var domain = location.host;
+      document.getElementById("domain").value = domain;
+    </script>
   </body>
 </html>
