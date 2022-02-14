@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">  
+    <title>Something big is Coming!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+      .h1, .h2, .h3, .h4, .h5, .h6, address, h1, h2, h3, h4, h5, h6, hr, p{
+        margin: 0 0 1.6875rem;
+        padding: 0;
+      }
+      @font-face {
+        font-family: "Rochester";
+        src: url(./fonts/Rochester/Rochester-Regular.ttf);
+        font-style: normal;
+      }
+      @font-face {
+        font-family:  "Reggae One";
+        src: url(./fonts/Reggae_One/ReggaeOne-Regular.ttf);
+      }
+      .coming-soon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        min-height: 100vh;
+        background: linear-gradient(45deg,rgb(86,90,216) 0%,rgb(110,60,205) 100%);
+      }
+      .coming-soon-inner-container{
+        text-align: center;
+        width: 100%;
+      }
+      .newsletter-container{
+        width: 50%;
+        margin: auto;
+      }
+      #coming-soon-heading{
+        font-size: 72px;
+        font-weight: 600;
+        font-family: "Rochester", Sans-serif;
+        line-height: 1;
+      }
+      #coming-soon-txt{
+        font-size: 22px;
+      }
+      input,button,p{
+        height: 40px;
+        font-family: "Reggae One", Sans-serif;
+        font-size: 16px;
+      }
+      input#email{
+        width: 50%;
+        background: #00000000;
+        text-indent: 10px;
+        box-shadow: 0px 0px 10px 0px rgb(255 255 255 / 50%);
+        margin-right: 25px;
+        padding: 6px 12px;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+      }
+      button#submit{
+        width: 50%;
+        border: 2px solid rgba(255, 255, 255, 1);
+        background-color: #00000000;
+        cursor: pointer;
+      }
+      #newsletter-input-container{
+        display: flex;
+        flex-direction: row;
+      }
+      ::placeholder{
+        color: white;
+      }
+      *:focus{
+        outline: none;
+      }
+      @media only screen and (max-width: 1000px){
+        #newsletter-input-container {
+          flex-direction: column;
+          padding: 20px;
+        }
+        input#email,button#submit{
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .newsletter-container{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="coming-soon-container">
+    <div class="coming-soon-inner-container">
+      <H1 id="coming-soon-heading">Something big is Coming!</H1>
+      <P id="coming-soon-txt">We’ll be here soon, subscribe to be notified.</P>
+      <div class="newsletter-container">
+        <form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <div hidden aria-hidden="true">
+            <label>
+              Don’t fill this out if you're human: 
+              <input name="bot-field" />
+            </label>
+          </div>
+          <div id="newsletter-input-container">
+            <input type="email" name="email" placeholder="Your Email Address"  id="email" required />
+            <button type="submit" id="submit">Subscribe</button>
+          </div>
+        </form>        
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
